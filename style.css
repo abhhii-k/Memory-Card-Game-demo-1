@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Stalinist One', cursive;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+h2{
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+main{
+    height: inherit;
+    width: inherit;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.heading{
+    font-family: 'Stalinist One', cursive;
+    height: 4rem;
+    position: absolute;
+    top: 1%;
+}
+.heading h1{
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-decoration: underline;
+    /* color: transparent; */
+    background: linear-gradient(75deg, rgba(117,252,101,1) 8%, rgba(255,242,0,1) 49%, rgba(241,143,234,1) 88%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container{
+    background-color: #D9AFD9;
+    background-image: linear-gradient(270deg, #D9AFD9 0%, #97D9E1 100%);
+
+    position: absolute;
+    top: 18%;
+    transition: all 1s;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+
+}
+
+.display-container{
+    color: white;
+    position: absolute;
+    height: 15rem;
+    width: 20rem;
+    font-size: 3rem;
+    top: 28%;
+    left: 16%;
+    transition: all 1s;
+    font-family: 'Stalinist One', cursive;
+
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.box-container{
+
+    display: grid;
+    background-color: #D9AFD9;
+    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr ;
+    align-items: center;
+    justify-content: center;
+    width: 30rem;
+    height: 30rem;
+    border: 10px solid black;
+    border-radius: 20px;
+    transition: all 1s;
+}
+
+.box{
+    height: 5rem;
+    width: 5rem;
+    /* border: 1px solid rgb(0, 0, 0); */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    justify-self: center;
+    position: relative;
+    transition: all 1s;
+    transform-style: preserve-3d ;
+    cursor: pointer;
+
+    text-align: center;
+
+}
+
+.front{
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    z-index: 100;
+    backface-visibility: hidden;
+}
+.back{
+    background: rgb(247, 247, 220);
+    z-index: 50;
+    transform: rotateY(180deg);
+}
+
+.front, .back{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.box .front h2{
+    height: 100%;
+    width: 100%;
+}
+
+
+.box-animate{
+    transform: rotateY(180deg);
+}
+
+.hide{
+    opacity: 0.3;
+    transform: scale(0.001);
+    visibility: hidden;
+}
+.disp{
+    transform: scale(1);
+    visibility: visible;
+}
+
+.control-conatiner{
+    height: 10rem;
+    width: 20rem;
+    position: absolute;
+    /* border: 2px solid black; */
+    top: 45%;
+    left: 73%;
+}
+
+.resetbtn{
+    height: 3rem;
+    width: 6rem;
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    transition: all 1s ease-in-out;
+
+    border: none;
+    position: absolute;
+    top: 65%;
+    left: 40%;
+}
+.resetbtn:hover{
+    color: white;
+    cursor: pointer;
+    border-radius: 5px; 
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    
+}
+
+.moves-disp{
+    height: 4rem;
+    width: 8rem;
+    background-color: #D9AFD9;
+    background-image: linear-gradient(270deg, #D9AFD9 0%, #97D9E1 100%);
+
+    border: 1px solid black;
+    border-radius: 4px;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    color: black;
+    font-size: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+.movesDisp{
+    font-weight: 900;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.yougot-disp{
+    height: 4rem;
+    width: 8rem;
+    background-color: #D9AFD9;
+    background-image: linear-gradient(270deg, #D9AFD9 0%, #97D9E1 100%);
+
+    border: 1px solid black;
+    border-radius: 4px;
+    position: absolute;
+    top: 2%;
+    left: 68%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.name-div{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: black;
+
+}
+
+.name-div h3 a {
+    color: black;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.name-div h3 a:hover {
+    color: rgb(196, 1, 245);
+    font-size: 1.3rem;
+}
